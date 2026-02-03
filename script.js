@@ -16,5 +16,5 @@ noBtn.addEventListener("mouseover", () => {
 });
 
 yesBtn.addEventListener("click", () => {
-  response.innerHTML = "Looking forward to the day 📚🥾💖";
+  response.innerHTML = "Really looking forward to Friday with you ;)";
 });
