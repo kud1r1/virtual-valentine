@@ -1,20 +1,46 @@
-const noBtn = document.getElementById("noBtn");
-const yesBtn = document.getElementById("yesBtn");
-const response = document.getElementById("response");
+const yesBtn = document.getElementById('yesBtn');
+const noBtn = document.getElementById('noBtn');
+const finalMessage = document.getElementById('finalMessage');
 
-noBtn.addEventListener("mouseover", () => {
-  const card = document.querySelector(".card");
+let yesClickCount = 0;
 
-  const maxX = card.clientWidth - noBtn.offsetWidth;
-  const maxY = card.clientHeight - noBtn.offsetHeight;
+// Floating hearts
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤️';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+    document.body.appendChild(heart);
 
-  const randomX = Math.random() * maxX;
-  const randomY = Math.random() * maxY;
+    setTimeout(() => heart.remove(), 5000);
+}
 
-  noBtn.style.left = `${randomX}px`;
-  noBtn.style.top = `${randomY}px`;
+setInterval(createHeart, 700);
+
+// No → Yes trick
+noBtn.addEventListener('click', () => {
+    noBtn.style.display = 'none';
+    yesBtn.textContent = 'Yes 😉';
 });
 
-yesBtn.addEventListener("click", () => {
-  response.innerHTML = "Really looking forward to Saturday with you ;)";
+// Yes logic
+yesBtn.addEventListener('click', () => {
+    yesClickCount++;
+
+    if (yesClickCount === 1) {
+        yesBtn.style.transform = 'scale(1.6)';
+        yesBtn.textContent = 'A big Yes — let the story begin ✨';
+    } 
+    else if (yesClickCount === 2) {
+        yesBtn.style.display = 'none';
+        finalMessage.textContent =
+`In this chapter, family comes first.
+
+With your dad visiting the UK,
+our Valentine story gently pauses.
+
+Resuming at the end of this month
+or the first week of the next ❤️`;
+    }
 });
