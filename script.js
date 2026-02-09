@@ -12,10 +12,8 @@ function createHeart() {
     heart.style.left = Math.random() * 100 + 'vw';
     heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
     document.body.appendChild(heart);
-
     setTimeout(() => heart.remove(), 5000);
 }
-
 setInterval(createHeart, 700);
 
 // No → Yes trick
@@ -24,9 +22,12 @@ noBtn.addEventListener('click', () => {
     yesBtn.textContent = 'Yes 😉';
 });
 
-// Yes logic
+// Yes Flow
 yesBtn.addEventListener('click', () => {
     yesClickCount++;
+
+    // 🔥 Hide No button immediately when Yes is clicked
+    noBtn.style.display = 'none';
 
     if (yesClickCount === 1) {
         yesBtn.style.transform = 'scale(1.6)';
@@ -34,13 +35,23 @@ yesBtn.addEventListener('click', () => {
     } 
     else if (yesClickCount === 2) {
         yesBtn.style.display = 'none';
+
         finalMessage.textContent =
 `In this chapter, family comes first.
 
 With your dad visiting the UK,
-our Valentine story gently pauses.
+our Valentine story pauses briefly.
+I’ve planned something productive and exciting—
+definitely worth the wait for our next date.
 
-Resuming at the end of this month
-or the first week of the next ❤️`;
+The next chapter opens
+towards the end of this month
+or the first week of the next ❤️
+once my Valentine confirms the date.`;
+
+        // window.scrollTo({
+        //     top: document.body.scrollHeight,
+        //     behavior: 'smooth'
+        // });
     }
 });
