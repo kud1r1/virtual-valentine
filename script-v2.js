@@ -45,17 +45,16 @@ yesBtn.addEventListener('click', () => {
         yesBtn.style.display = 'none';
 
         finalMessage.textContent =
-`In this chapter, family comes first.
+`For now, family comes first.
 
 With your dad visiting the UK,
 our Valentine story pauses briefly.
-I’ve planned something productive and exciting—
-definitely worth the wait for our next date.
 
-The next chapter opens
-towards the end of this month
-or the first week of the next ❤️
-once my Valentine confirms the date.`;
+I might have something mildly productive 
+(and possibly exciting) in mind for our next date.
+
+The next chapter opens towards the end of this month or 
+the first week of the next — once schedules align.`;
 
         // Optional: scroll to message nicely
         finalMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
