@@ -54,7 +54,7 @@ I might have something mildly productive
 (and possibly exciting) in mind for our next date.
 
 The next chapter opens towards the end of this month or 
-the first week of the next — once schedules align.`;
+the first week of the next- once schedules align.`;
 
         // Optional: scroll to message nicely
         finalMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
