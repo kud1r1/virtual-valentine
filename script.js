@@ -8,12 +8,19 @@ let yesClickCount = 0;
 function createHeart() {
     const heart = document.createElement('div');
     heart.classList.add('heart');
-    heart.innerHTML = '❤️';
+    heart.innerHTML = '♥';  // <-- text heart (CSS colour will apply)
+
     heart.style.left = Math.random() * 100 + 'vw';
     heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+
+    const colors = ['#ff4d6d', '#F4C2C2', '#c77dff'];
+    heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+
     document.body.appendChild(heart);
     setTimeout(() => heart.remove(), 5000);
 }
+
+
 setInterval(createHeart, 700);
 
 // No → Yes trick
