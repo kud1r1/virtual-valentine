@@ -122,3 +122,81 @@ h1 {
     pointer-events: none;
     z-index: 1; /* behind container */
 }
+
+
+/* CAMEO STYLING */
+.cameo{
+  margin: 22px auto 12px;
+  text-align: center;
+}
+
+.cameo-img{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.cameo-img:hover{
+  transform: scale(1.05);
+}
+
+.cameo-text{
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* Mobile adjustments */
+@media (max-width: 420px) {
+  .cameo-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.quote{
+  margin-top: 10px;
+  margin-bottom: 22px;
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0.75;
+  letter-spacing: 0.5px;
+}
+
+.cameo{
+  margin: 22px auto 12px;
+  text-align: center;
+}
+
+.cameo-img{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.cameo-img:hover{
+  transform: scale(1.05);
+}
+
+.cameo-text{
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+@media (max-width: 420px) {
+  .cameo-img {
+    width: 100px;
+    height: 100px;
+  }
+}

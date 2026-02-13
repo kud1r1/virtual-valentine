@@ -47,14 +47,15 @@ yesBtn.addEventListener('click', () => {
         finalMessage.textContent =
 `For now, family comes first.
 
-With your dad visiting the UK,
-our Valentine story pauses briefly.
+With your dad in the UK,
+our Valentine chapter pauses — just briefly.
 
-I might have something mildly productive 
-(and possibly exciting) in mind for our next date.
+There may or may not be a slightly hands-on chapter
+waiting for its debut.
 
-The next chapter opens towards the end of this month or 
-the first week of the next- once schedules align.`;
+The next page turns toward the end of this month
+or the first week of the next —
+once schedules align.`;
 
         // Optional: scroll to message nicely
         finalMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
